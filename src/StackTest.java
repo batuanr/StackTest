@@ -4,9 +4,9 @@ import java.util.Stack;
 import java.util.stream.IntStream;
 
 public class StackTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int[] arr = {1, 2, 3, 4, 5};
-        Stack<Integer> newNumber = new Stack<>();
+        MyStack<Integer> newNumber = new MyStack<>(6);
        for (int e: arr){
            newNumber.push(e);
        }
@@ -15,7 +15,7 @@ public class StackTest {
         }
         System.out.println(Arrays.toString(arr));
 
-        Stack<String> wstack = new Stack<>();
+        MyStack<String> wstack = new MyStack<>();
         String test = "xin chao java";
         String[] word = test.split(" ");
 
